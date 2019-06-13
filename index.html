@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EdgeLedger Website | Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        *{
+            font-family: 'Roboto Slab', serif;
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+        }
+        nav {
+            color:white;
+            display:flex;
+            background-color: #333333;
+            position:fixed;
+            top:0;
+            opacity: 0.95;
+            width:100%;
+        }
+        #leftnav {
+            display:flex;
+            justify-content: flex-start;
+            font-size: 1.2rem;
+            flex:1;
+            /*flex:1;*/
+            /*align-self: flex-start;*/
+            /*justify-self: flex-start;*/
+        }
+        #leftnav i {
+            color:#7ab436;
+            font-size:2rem;
+            align-self: center;
+            margin:0 0.5rem;
+        }
+        #leftnav h1 {
+            margin:0.7rem;
+        }
+        #rightnav a , #fond a {
+            flex:3;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            color:white;
+            margin:0.6rem;
+            padding:0.7rem;
+            border-radius: 10px;
+        }
+        #rightnav a:hover , #fond a {
+            background-color: #7ab436;
+            text-decoration: underline;
+        }
+        #rightnav {
+            display:flex;
+            align-items: center;
+            /*justify-self: flex-end;*/
+            /*flex:1;*/
+            /*display: flex;*/
+            /*justify-self: flex-end;*/
+            /*align-self: flex-end;*/
+        }
+        #fond {
+            text-align: center;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            background: url("img/showcase.jpg") black;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size:  100vw 100vh;
+        }
+        /*#contenufond {*/
+        /*    margin:1.5rem;*/
+        /*}*/
+        #contenufond {
+            margin-top:5rem !important;
+        }
+        #fond h1 {
+            font-size: 4rem;
+            padding: 0 1rem;
+            margin-bottom:1rem;
+            margin-top:0;
+        }
+        #fond p {
+            font-size: 1.5rem;
+            margin-bottom:0.5rem;
+            padding: 0 2rem;
+            padding-bottom:0.5rem;
+        }
+        #fond a {
+            font-size:1.3rem;
+            display: inline-block;
+        }
+        #fond a:hover {
+            background-color: #18bd1b ;
+        }
+        #who {
+            display : flex;
+        }
+        #image {
+            display:block;
+            background-size:cover;
+            background-image: url("img/people.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            flex:1;
+        }
+        #us {
+            /*display:block;*/
+            padding:2rem;
+            background-color: #333333;
+            color: white ;
+            flex:1;
+        }
+        #us h1 , #what-title{
+            margin-bottom:0.8rem;
+            font-size:2.5rem;
+        }
+        #who p {
+            margin-top: 0.5rem;
+            padding-left:1.2rem;
+        }
+        #who ul {
+            list-style: none;
+            padding:0;
+        }
+        #who li {
+            padding:0.8rem;
+            font-size:1.2rem;
+            border-bottom : #444 dotted 2px;
+        }
+        #who2 {
+            display: none;
+        }
+        #clients h1 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 1rem;
+            margin-bottom:0.8rem;
+            font-size:3rem;
+        }
+        #liste-clients{
+            padding: 0 4vw;
+            display: flex;
+            width: 100%;
+            list-style: none;
+            justify-content: space-evenly;
+            align-content: flex-start;
+            flex-wrap: wrap;
+
+        }
+        #clients {
+            background-color: #f4f4f4;
+            height:110%;
+        }
+        .client{
+            margin:0.5rem;
+            padding: 1rem 0.5vw;
+            padding-bottom:2rem;
+            width:13vw;
+            height:20vh;
+        }
+        #what {
+            display: flex;
+            margin: 1rem 9vw;
+            justify-content: center;
+        }
+        .what {
+            display: flex;
+            align-items: center;
+            margin:  2rem 0;
+            margin-top:1rem;
+        }
+        .icone {
+            font-size: 2.2rem;
+            margin-right:1rem;
+            padding:1rem;
+            color:#333333;
+            background-color: #7ab436;
+            border-radius: 50%;
+        }
+        #contact {
+            padding: 1rem;
+            background-color: #7ab436;
+            color:white;
+        }
+        #contact h1 {
+            font-size: 1.9rem;
+
+        }
+        #contact p {
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+        #contact h2 {
+            font-size: 1.1rem;
+            font-weight: lighter;
+        }
+        #contact input {
+            display: block;
+            max-width:130%;
+            padding:0.7rem;
+        }
+        #contact a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            color:white;
+            margin:0.6rem;
+            padding:0.7rem;
+            border-radius: 10px;
+            background-color: #333333;
+        }
+        #contact a:hover{
+            font-weight: bold;
+            background-color: #93cb52;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            #leftnav {
+                justify-content: center;
+            }
+        }
+        @media (max-width:359px) {
+            #rightnav a{
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 540px) {
+            #fond h1 {
+                font-size : 3rem ;
+            }
+            #fond p {
+                font-size: 0.9rem;
+            }
+            #fond a {
+                margin-top: 0;
+                font-size : 0.7rem;
+            }
+        }
+        @media (max-height: 700px) {
+            #contenufond {
+                margin-top:5rem;
+            }
+        }
+        @media (max-width: 1200px) {
+            #who {
+                display:none;
+            }
+            #who2 {
+                display: flex;
+                flex-direction: column;
+            }
+            #image2 {
+                height:35vh;
+            }
+            #who2 #us ul {
+                padding:1rem;
+                text-align: center;
+                list-style: none;
+            }
+            #who2 #us li {
+                font-size:1.2rem;
+                padding: 0.7rem 0;
+                border-bottom : #444 dotted 2px;
+            }
+            #who2 h1 {
+                margin-top: 1rem;
+            }
+            #who2 h2 {
+                padding: 1rem 0;
+                padding-bottom: 0;
+            }
+        }
+        @media (max-width: 1200px){
+            #what {
+                flex-direction: column;
+            }
+        }
+        #contact {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="leftnav">
+            <i class="fas fa-book-reader"></i>
+            <h1> <span style="color: #7ab436">Edge</span>Ledger</h1>
+        </div>
+        <div id="rightnav">
+            <a href="#contact">Contact</a>
+            <a href="#who">Who</a>
+            <a href="#what-title">What</a>
+            <a href="#fond">Home</a>
+        </div>
+    </nav>
+    <section id="fond" style="margin:0;">
+        <div id="contenufond">
+            <h1>The sky is Limit</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consequuntur eaque eum perspiciatis voluptatem voluptatum.</p>
+            <a href="#">Read More</a>
+        </div>
+    </section>
+    <h1 id="what-title" style="text-align: center"><span style="color:#7ab436">What </span> We Do</h1>
+    <section id="what">
+        <article class="what" id="what1">
+            <div class="icone">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="content">
+                <h1>Investmnent Banking</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+            </div>
+        </article>
+        <article class="what" id="what2">
+            <div class="icone">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="content">
+                <h1>Portfolio Management</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+            </div>
+        </article>
+        <article class="what" id="what3">
+            <div class="icone">
+                <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="content">
+                <h1>Tax & Custodial</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatum!</p>
+            </div>
+        </article>
+    </section>
+<!--    For Desktops -->
+    <section id="who">
+        <div id="image">
+        </div>
+        <div id="us">
+            <h1><span style="color:#7ab436">Who</span> We Are</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem ex minus porro sapiente. Eaque iure obcaecati odit omnis vel?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, repudiandae.</p>
+            <h2> Our Team </h2>
+            <ul>
+                <li>Mark Smith: CEO</li>
+                <li>Shannon Johnson: CFO</li>
+                <li>John Corbit: Lead Accountant</li>
+                <li>Janet Williams: Investment Manager</li>
+                <li>Kara Jackson: Senior Accountant</li>
+            </ul>
+        </div>
+    </section>
+<!--    For Tablets / Smartphones-->
+    <section id="who2">
+        <img id="image2" src="img/people.jpg" alt="">
+        <div id="us">
+            <h1 style="text-align: center"><span style="color:#7ab436">Who</span> We Are</h1>
+            <p style="text-align: center; font-size: 1.2rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem ex minus porro sapiente. Eaque iure obcaecati odit omnis vel?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, repudiandae.</p>
+            <h2 style="font-size: 2.5rem; text-align: center"> Our Team </h2>
+            <ul>
+                <li>Mark Smith: CEO</li>
+                <li>Shannon Johnson: CFO</li>
+                <li>John Corbit: Lead Accountant</li>
+                <li>Janet Williams: Investment Manager</li>
+                <li>Kara Jackson: Senior Accountant</li>
+            </ul>
+        </div>
+    </section>
+<!---->
+
+    <section id="clients">
+        <h1> <span style="color:#7ab436">Our </span> clients</h1>
+        <div id="liste-clients">
+            <img class="client" src="img/logos/logo1.png" alt="">
+            <img class="client" src="img/logos/logo2.png" alt="">
+            <img class="client" src="img/logos/logo3.png" alt="">
+            <img class="client" src="img/logos/logo4.png" alt="">
+            <img class="client" src="img/logos/logo5.png" alt="">
+<!--            <div id="client1" class="client"></div>-->
+<!--            <div id="client2" class="client"></div>-->
+<!--            <div id="client3" class="client"></div>-->
+<!--            <div id="client4" class="client"></div>-->
+<!--            <div id="client5" class="client"></div>-->
+        </div>
+    </section>
+    <div id="contact">
+        <div id="form">
+            <h1>Contact Us</h1>
+            <p>Please use the form below to contact us</p>
+            <div style="padding: 0 1rem;">
+                <h2>Name</h2>
+                <input type="text" placeholder="Enter Your Name ...">
+                <h2>Email</h2>
+                <input type="email" placeholder="Enter Your Email ...">
+                <h2>Phone Number</h2>
+                <input type="number" placeholder="Enter Your Phone Number ...">
+                <h2>Message</h2>
+                <textarea name="message" id="" cols="30" rows="5" placeholder="Please Leave Us a constructive Message ..."></textarea>
+                <br><a href="#">Send</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
